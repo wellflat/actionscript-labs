@@ -5,7 +5,7 @@ package {
   
   [SWF(width="465", height="465", backgroundColor="#000000")]
   
-	public class Test extends Sprite {
+  public class Test extends Sprite {
     private var nodes:Vector.<String>;
     private var hash:ConsistentHash;
     private var hist:Object;
@@ -51,7 +51,7 @@ package {
         }
       }
     }
-		private function p(str:String):void {
+    private function p(str:String):void {
       if(!tf) {
         tf = new TextField();
         tf.x = 10;
