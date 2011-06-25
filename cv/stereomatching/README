@@ -1,0 +1,7 @@
+* Stereo Matching implementation in pure ActionScript3.0
+* computes the disparity for the rectified stereo pair
+* 
+* @author wellflat
+*
+* see also:
+*   http://rest-term.com/archives/2816/

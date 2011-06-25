@@ -1,0 +1,8 @@
+* Fast Fourier Transform (FFT) implementation in pure ActionScript3.0
+* including 1D/2D-FFT, High/Low/Bandpass Filter
+* 
+* @author wellflat
+*
+* see also: 
+*   http://rest-term.com/archives/1289/
+*   http://rest-term.com/archives/1345/
