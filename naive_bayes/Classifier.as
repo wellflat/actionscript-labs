@@ -11,8 +11,8 @@ package {
       this.categoryCount = new Dictionary();
       this.getFeatures = getFeatures;
     }
-    public function train(item:String, category:String):void {
-      var features:Dictionary = getFeatures(item);
+    public function train(document:String, category:String):void {
+      var features:Dictionary = getFeatures(document);
       for(var f:String in features) {
         incrFeatureCount(f, category);
       }

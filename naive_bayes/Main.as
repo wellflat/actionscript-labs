@@ -22,10 +22,6 @@ package {
       p("P(quick money|bad) = " + nb.getProb("quick money", "bad").toString());
       p("class 'quick money': " + nb.classify("quick money"));
       p("");
-      p("P(HTML5|good) = " + nb.getProb("HTML5", "good").toString());
-      p("P(HTML5|bad) = " + nb.getProb("HTML5", "bad").toString());
-      p("class 'HTML5': " + nb.classify("HTML5"));
-      p("");
       nb.setThreshold("bad", 3.0);
       p("P(HTML5 Flash|good) = " + nb.getProb("HTML5 Flash", "good").toString());
       p("P(HTML5 Flash|bad) = " + nb.getProb("HTML5 Flash", "bad").toString());
@@ -47,11 +43,11 @@ package {
       classifier.train("HTML5 vs. Flash comparison", "bad");
     }
     // make features(bug-of-words) from document
-    private function getFeatures(doc:String):Dictionary {
+    private function getFeatures(document:String):Dictionary {
       var delimiter:RegExp = /\W+/;
       var words:Array = [];
       var features:Dictionary = new Dictionary();
-      for each(var s:String in doc.split(delimiter)) {
+      for each(var s:String in document.split(delimiter)) {
         if(s.length > 2) {
           words.push(s.toLowerCase());  
         }
