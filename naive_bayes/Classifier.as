@@ -24,6 +24,12 @@ package {
       }
       return 0.0;
     }
+    protected function getFeatureCount(feature:String, category:String):Number {
+      if(!featureCount[feature][category]) {
+        return 0.0;
+      }
+      return Number(featureCount[feature][category]);
+    }
     protected function getTotalCount():uint {
       var cnt:uint = 0;
       for each(var i:uint in categoryCount) {
@@ -69,11 +75,6 @@ package {
       }
       categoryCount[category]++;
     }
-    private function getFeatureCount(feature:String, category:String):Number {
-      if(!featureCount[feature][category]) {
-        return 0.0;
-      }
-      return Number(featureCount[feature][category]);
-    }
+
   }
 }
